@@ -1,4 +1,4 @@
-﻿namespace AlvQuestAlpha
+﻿namespace AlvQuestAlpha.FrontEnd
 {
     public class CardPanel : Panel
     {
@@ -22,11 +22,10 @@
         private readonly (Point Location, Size Size) StatPanelProps = (new Point(2, 559), new Size(224, 469));
         private readonly (Point Location, Size Size) SpellPanelProps = (new Point(227, 559), new Size(224, 469));
 
-        public CardPanel(int x, int y)
+        public CardPanel()
         {
             // Установка размеров и положения панели
             Size = new Size(CardPanelWidth, CardPanelHeight);
-            Location = new Point(x, y);
             BorderStyle = BorderStyle.FixedSingle;
             BackColor = Color.FromArgb(25, 23, 24);
 

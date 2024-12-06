@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             MainPanel = new Panel();
-            GridPanel = new Panel();
             ArenaPanel = new Panel();
+            GridPanel = new Panel();
             CardPanel = new Panel();
             SpellPanel = new Panel();
             PerkPanel = new Panel();
@@ -41,6 +41,7 @@
             IconPanel = new Panel();
             panel9 = new Panel();
             TopMenuPanel = new Panel();
+            TurnCounter = new Label();
             MainPanel.SuspendLayout();
             ArenaPanel.SuspendLayout();
             CardPanel.SuspendLayout();
@@ -50,7 +51,6 @@
             // 
             MainPanel.BackColor = Color.FromArgb(25, 23, 24);
             MainPanel.BorderStyle = BorderStyle.FixedSingle;
-            MainPanel.Controls.Add(GridPanel);
             MainPanel.Controls.Add(ArenaPanel);
             MainPanel.Controls.Add(TopMenuPanel);
             MainPanel.Location = new Point(0, 0);
@@ -58,18 +58,10 @@
             MainPanel.Size = new Size(1920, 1080);
             MainPanel.TabIndex = 0;
             // 
-            // GridPanel
-            // 
-            GridPanel.BackgroundImageLayout = ImageLayout.Zoom;
-            GridPanel.BorderStyle = BorderStyle.FixedSingle;
-            GridPanel.Location = new Point(459, 44);
-            GridPanel.Margin = new Padding(2);
-            GridPanel.Name = "GridPanel";
-            GridPanel.Size = new Size(1000, 1000);
-            GridPanel.TabIndex = 6;
-            // 
             // ArenaPanel
             // 
+            ArenaPanel.Controls.Add(TurnCounter);
+            ArenaPanel.Controls.Add(GridPanel);
             ArenaPanel.Controls.Add(CardPanel);
             ArenaPanel.Controls.Add(panel9);
             ArenaPanel.Location = new Point(2, 44);
@@ -77,6 +69,16 @@
             ArenaPanel.Name = "ArenaPanel";
             ArenaPanel.Size = new Size(1914, 1032);
             ArenaPanel.TabIndex = 7;
+            // 
+            // GridPanel
+            // 
+            GridPanel.BackgroundImageLayout = ImageLayout.Zoom;
+            GridPanel.BorderStyle = BorderStyle.FixedSingle;
+            GridPanel.Location = new Point(457, 0);
+            GridPanel.Margin = new Padding(1);
+            GridPanel.Name = "GridPanel";
+            GridPanel.Size = new Size(1000, 1000);
+            GridPanel.TabIndex = 6;
             // 
             // CardPanel
             // 
@@ -162,7 +164,7 @@
             // 
             panel9.BorderStyle = BorderStyle.FixedSingle;
             panel9.Location = new Point(1459, 0);
-            panel9.Margin = new Padding(2);
+            panel9.Margin = new Padding(1);
             panel9.Name = "panel9";
             panel9.Padding = new Padding(2);
             panel9.Size = new Size(455, 1032);
@@ -176,6 +178,19 @@
             TopMenuPanel.Name = "TopMenuPanel";
             TopMenuPanel.Size = new Size(1914, 40);
             TopMenuPanel.TabIndex = 0;
+            // 
+            // TurnCounter
+            // 
+            TurnCounter.BorderStyle = BorderStyle.FixedSingle;
+            TurnCounter.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            TurnCounter.ForeColor = SystemColors.AppWorkspace;
+            TurnCounter.Location = new Point(457, 1002);
+            TurnCounter.Margin = new Padding(1);
+            TurnCounter.Name = "TurnCounter";
+            TurnCounter.Size = new Size(1000, 30);
+            TurnCounter.TabIndex = 7;
+            TurnCounter.Text = "Ход:";
+            TurnCounter.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // SettingsForm
             // 
@@ -207,5 +222,6 @@
         private Panel StatPanel;
         private Panel PerkPanel;
         private Panel ArenaPanel;
+        private Label TurnCounter;
     }
 }
