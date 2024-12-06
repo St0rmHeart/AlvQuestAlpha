@@ -32,9 +32,9 @@
             GridPanel = new Panel();
             ArenaPanel = new Panel();
             CardPanel = new Panel();
-            SpellsPanel = new Panel();
-            StatsPanel = new Panel();
+            SpellPanel = new Panel();
             PerkPanel = new Panel();
+            StatPanel = new Panel();
             EquipmentPanel = new Panel();
             GoldExpPanel = new Panel();
             ManaPanel = new Panel();
@@ -81,9 +81,9 @@
             // CardPanel
             // 
             CardPanel.BorderStyle = BorderStyle.FixedSingle;
-            CardPanel.Controls.Add(SpellsPanel);
+            CardPanel.Controls.Add(SpellPanel);
             CardPanel.Controls.Add(PerkPanel);
-            CardPanel.Controls.Add(StatsPanel);
+            CardPanel.Controls.Add(StatPanel);
             CardPanel.Controls.Add(EquipmentPanel);
             CardPanel.Controls.Add(GoldExpPanel);
             CardPanel.Controls.Add(ManaPanel);
@@ -95,23 +95,14 @@
             CardPanel.Size = new Size(455, 1032);
             CardPanel.TabIndex = 1;
             // 
-            // SpellsPanel
+            // SpellPanel
             // 
-            SpellsPanel.BorderStyle = BorderStyle.FixedSingle;
-            SpellsPanel.Location = new Point(227, 559);
-            SpellsPanel.Margin = new Padding(1);
-            SpellsPanel.Name = "SpellsPanel";
-            SpellsPanel.Size = new Size(224, 469);
-            SpellsPanel.TabIndex = 5;
-            // 
-            // StatsPanel
-            // 
-            StatsPanel.BorderStyle = BorderStyle.FixedSingle;
-            StatsPanel.Location = new Point(2, 559);
-            StatsPanel.Margin = new Padding(1);
-            StatsPanel.Name = "StatsPanel";
-            StatsPanel.Size = new Size(224, 469);
-            StatsPanel.TabIndex = 4;
+            SpellPanel.BorderStyle = BorderStyle.FixedSingle;
+            SpellPanel.Location = new Point(227, 559);
+            SpellPanel.Margin = new Padding(1);
+            SpellPanel.Name = "SpellPanel";
+            SpellPanel.Size = new Size(224, 469);
+            SpellPanel.TabIndex = 5;
             // 
             // PerkPanel
             // 
@@ -121,6 +112,15 @@
             PerkPanel.Name = "PerkPanel";
             PerkPanel.Size = new Size(224, 224);
             PerkPanel.TabIndex = 4;
+            // 
+            // StatPanel
+            // 
+            StatPanel.BorderStyle = BorderStyle.FixedSingle;
+            StatPanel.Location = new Point(2, 559);
+            StatPanel.Margin = new Padding(1);
+            StatPanel.Name = "StatPanel";
+            StatPanel.Size = new Size(224, 469);
+            StatPanel.TabIndex = 4;
             // 
             // EquipmentPanel
             // 
@@ -203,8 +203,8 @@
         private Panel EquipmentPanel;
         private Panel panel9;
         private Panel GridPanel;
-        private Panel SpellsPanel;
-        private Panel StatsPanel;
+        private Panel SpellPanel;
+        private Panel StatPanel;
         private Panel PerkPanel;
         private Panel ArenaPanel;
     }
