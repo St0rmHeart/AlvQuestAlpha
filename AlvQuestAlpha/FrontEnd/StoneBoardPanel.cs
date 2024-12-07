@@ -2,19 +2,19 @@
 
 namespace AlvQuestAlpha.FrontEnd
 {
-    public class StoneBoardPanel : Panel
+    public class StoneBoardPanel : MoveableCustomPanel
     {
-        public class CellPictureBox : PictureBox
+        private class CellPictureBox : PictureBox
         {
             public int Row { get; set; } = -1;
             public int Col { get; set; } = -1;
             public int StoneId { get; set; } = -1;
         }
 
-        private const int SleepTime = 500;
+        private const int SleepTime = 250;
         private void InitAnimationStep()
         {
-            Update();
+            Panel.Update();
             Thread.Sleep(SleepTime);
         }
 
@@ -49,7 +49,7 @@ namespace AlvQuestAlpha.FrontEnd
 
         public StoneBoardPanel()
         {
-            Size = new Size(PanelSize, PanelSize);
+            Panel.Size = new Size(PanelSize, PanelSize);
             FillGrid();
         }
 
@@ -72,7 +72,7 @@ namespace AlvQuestAlpha.FrontEnd
                     };
                     pictureBox.MouseDown += CellPictureBox_MouseClick;
                     Grid[row, col] = pictureBox;
-                    Controls.Add(pictureBox);
+                    Panel.Controls.Add(pictureBox);
                 }
             }
         }
@@ -144,7 +144,7 @@ namespace AlvQuestAlpha.FrontEnd
             UpdateStonePictureBox(bX, bY);
             a.BackColor = BaseColor;
             b.BackColor = BaseColor;
-            Update();
+            Panel.Update();
         }
 
         private void MarkCombinedStones(object sender, (int X, int Y)[] e)

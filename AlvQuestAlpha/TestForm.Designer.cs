@@ -34,7 +34,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(25, 23, 24);
             ClientSize = new Size(1934, 1054);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "TestForm";
             Text = "TestForm";
             ResumeLayout(false);
