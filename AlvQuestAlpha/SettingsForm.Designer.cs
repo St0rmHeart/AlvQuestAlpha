@@ -34,24 +34,28 @@
             GridPanel = new Panel();
             CardPanel = new Panel();
             HealthPanel = new Panel();
+            HealthLabel = new Label();
             NamePanel = new Panel();
             NameLabel = new Label();
             SpellPanel = new Panel();
             PerkPanel = new Panel();
             StatPanel = new Panel();
+            StatElementPanel = new Panel();
+            StatLabel = new Label();
             EquipmentPanel = new Panel();
             GoldExpPanel = new Panel();
             ManaPanel = new Panel();
             IconPanel = new Panel();
+            IconPictureBox = new PictureBox();
             panel9 = new Panel();
             TopMenuPanel = new Panel();
-            HealthLabel = new Label();
-            IconPictureBox = new PictureBox();
             MainPanel.SuspendLayout();
             ArenaPanel.SuspendLayout();
             CardPanel.SuspendLayout();
             HealthPanel.SuspendLayout();
             NamePanel.SuspendLayout();
+            StatPanel.SuspendLayout();
+            StatElementPanel.SuspendLayout();
             IconPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)IconPictureBox).BeginInit();
             SuspendLayout();
@@ -131,6 +135,18 @@
             HealthPanel.Size = new Size(160, 52);
             HealthPanel.TabIndex = 4;
             // 
+            // HealthLabel
+            // 
+            HealthLabel.Font = new Font("Century Gothic", 14F);
+            HealthLabel.ForeColor = SystemColors.ControlLight;
+            HealthLabel.Location = new Point(1, 1);
+            HealthLabel.Margin = new Padding(1);
+            HealthLabel.Name = "HealthLabel";
+            HealthLabel.Size = new Size(156, 18);
+            HealthLabel.TabIndex = 1;
+            HealthLabel.Text = "105 / 120";
+            HealthLabel.TextAlign = ContentAlignment.TopCenter;
+            // 
             // NamePanel
             // 
             NamePanel.BorderStyle = BorderStyle.FixedSingle;
@@ -156,10 +172,10 @@
             // SpellPanel
             // 
             SpellPanel.BorderStyle = BorderStyle.FixedSingle;
-            SpellPanel.Location = new Point(227, 559);
+            SpellPanel.Location = new Point(227, 561);
             SpellPanel.Margin = new Padding(1);
             SpellPanel.Name = "SpellPanel";
-            SpellPanel.Size = new Size(224, 469);
+            SpellPanel.Size = new Size(224, 467);
             SpellPanel.TabIndex = 5;
             // 
             // PerkPanel
@@ -168,17 +184,38 @@
             PerkPanel.Location = new Point(227, 377);
             PerkPanel.Margin = new Padding(1);
             PerkPanel.Name = "PerkPanel";
-            PerkPanel.Size = new Size(224, 180);
+            PerkPanel.Size = new Size(224, 182);
             PerkPanel.TabIndex = 4;
             // 
             // StatPanel
             // 
             StatPanel.BorderStyle = BorderStyle.FixedSingle;
-            StatPanel.Location = new Point(2, 559);
+            StatPanel.Controls.Add(StatElementPanel);
+            StatPanel.Location = new Point(2, 561);
             StatPanel.Margin = new Padding(1);
             StatPanel.Name = "StatPanel";
-            StatPanel.Size = new Size(224, 469);
+            StatPanel.Size = new Size(224, 467);
             StatPanel.TabIndex = 4;
+            // 
+            // StatElementPanel
+            // 
+            StatElementPanel.Controls.Add(StatLabel);
+            StatElementPanel.Location = new Point(0, 0);
+            StatElementPanel.Margin = new Padding(0);
+            StatElementPanel.Name = "StatElementPanel";
+            StatElementPanel.Size = new Size(222, 60);
+            StatElementPanel.TabIndex = 0;
+            // 
+            // StatLabel
+            // 
+            StatLabel.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            StatLabel.ForeColor = SystemColors.ControlLight;
+            StatLabel.Location = new Point(0, 0);
+            StatLabel.Name = "StatLabel";
+            StatLabel.Size = new Size(222, 60);
+            StatLabel.TabIndex = 0;
+            StatLabel.Text = "Мастерство огня: 55\r\nБс.999% Дх.999% Сп.999%";
+            StatLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // EquipmentPanel
             // 
@@ -186,7 +223,7 @@
             EquipmentPanel.Location = new Point(2, 377);
             EquipmentPanel.Margin = new Padding(1);
             EquipmentPanel.Name = "EquipmentPanel";
-            EquipmentPanel.Size = new Size(224, 180);
+            EquipmentPanel.Size = new Size(224, 182);
             EquipmentPanel.TabIndex = 3;
             // 
             // GoldExpPanel
@@ -217,6 +254,15 @@
             IconPanel.Size = new Size(287, 287);
             IconPanel.TabIndex = 0;
             // 
+            // IconPictureBox
+            // 
+            IconPictureBox.Location = new Point(0, 0);
+            IconPictureBox.Margin = new Padding(0);
+            IconPictureBox.Name = "IconPictureBox";
+            IconPictureBox.Size = new Size(285, 285);
+            IconPictureBox.TabIndex = 0;
+            IconPictureBox.TabStop = false;
+            // 
             // panel9
             // 
             panel9.BorderStyle = BorderStyle.FixedSingle;
@@ -236,27 +282,6 @@
             TopMenuPanel.Size = new Size(1914, 40);
             TopMenuPanel.TabIndex = 0;
             // 
-            // HealthLabel
-            // 
-            HealthLabel.Font = new Font("Century Gothic", 14F);
-            HealthLabel.ForeColor = SystemColors.ControlLight;
-            HealthLabel.Location = new Point(1, 1);
-            HealthLabel.Margin = new Padding(1);
-            HealthLabel.Name = "HealthLabel";
-            HealthLabel.Size = new Size(156, 18);
-            HealthLabel.TabIndex = 1;
-            HealthLabel.Text = "105 / 120";
-            HealthLabel.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // IconPictureBox
-            // 
-            IconPictureBox.Location = new Point(0, 0);
-            IconPictureBox.Margin = new Padding(0);
-            IconPictureBox.Name = "IconPictureBox";
-            IconPictureBox.Size = new Size(285, 285);
-            IconPictureBox.TabIndex = 0;
-            IconPictureBox.TabStop = false;
-            // 
             // SettingsForm
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -271,6 +296,8 @@
             CardPanel.ResumeLayout(false);
             HealthPanel.ResumeLayout(false);
             NamePanel.ResumeLayout(false);
+            StatPanel.ResumeLayout(false);
+            StatElementPanel.ResumeLayout(false);
             IconPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)IconPictureBox).EndInit();
             ResumeLayout(false);
@@ -297,5 +324,7 @@
         private Label NameLabel;
         private Label HealthLabel;
         private PictureBox IconPictureBox;
+        private Panel StatElementPanel;
+        private Label StatLabel;
     }
 }

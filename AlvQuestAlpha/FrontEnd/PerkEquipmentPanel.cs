@@ -21,7 +21,7 @@
 
             ImagePictureBox.Location = new Point(1, 1);
             ImagePictureBox.Size = new Size(28, 28);
-            ImagePictureBox.BackColor = Color.FromArgb(55, 22, 27);
+            ImagePictureBox.BackColor = Color.Black;
             ImagePictureBox.BorderStyle = BorderStyle.FixedSingle;
 
             NameLabel.Location = new Point(33, 1);

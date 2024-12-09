@@ -49,7 +49,7 @@ namespace AlvQuestAlpha.FrontEnd
 
         public StoneBoardPanel()
         {
-            Panel.Size = new Size(PanelSize, PanelSize);
+            Panel.BorderStyle = BorderStyle.None;
             FillGrid();
         }
 
@@ -61,7 +61,7 @@ namespace AlvQuestAlpha.FrontEnd
             {
                 for (int col = 0; col < GridSize; col++)
                 {
-                    CellPictureBox pictureBox = new CellPictureBox
+                    CellPictureBox pictureBox = new()
                     {
                         Size = new Size(CellSize, CellSize),
                         Location = new Point(col * CellSize, row * CellSize),
